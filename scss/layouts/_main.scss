@@ -1,0 +1,32 @@
+@use '../functions/get-color' as func;
+@use '../mixins' as mixin;
+
+.main {
+    height: 100vh;
+    padding-inline: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: {
+        color: func.get-color(
+            background-primary
+        ); /* fallback for old browsers */
+        image: url('../../img/background/bgw576.webp');
+        size: cover;
+        position: 50%;
+    }
+
+    @include mixin.high-resolution {
+        background-image: url('../../img/background/bgw576@2x.webp');
+    }
+
+    @include mixin.breakpoints(sm) {
+        background-image: url('../../img/background/bgw992.webp');
+    }
+
+    @include mixin.breakpoints(lg) {
+        background-image: url('../../img/background/bgw1920.webp');
+    }
+}

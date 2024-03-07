@@ -1,0 +1,52 @@
+@use '../settings/config' as conf;
+@use '../functions' as func;
+
+/**
+ * Loader styles.
+ *
+  * @type {LoaderStyles}
+ */
+
+.loader {
+    width: 10rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    opacity: 0.6;
+
+    background:
+        radial-gradient(
+                farthest-side,
+                func.get-color(foreground-primary) 94%,
+                func.get-color(loader-secondary)
+            )
+            top/0.8rem 0.8rem no-repeat,
+        conic-gradient(
+            func.get-color(loader-secondary) 30%,
+            func.get-color(foreground-primary)
+        );
+
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        func.get-color(loader-secondary) calc(100% - 0.8rem),
+        func.get-color(loader-primary) 0
+    );
+    animation: rotate 1s infinite linear;
+
+    &--hidden {
+        display: none;
+    }
+}
+
+/**
+ * Rotation animation for the loader.
+ *
+ * @memberof conf.loader
+ * @type {Keyframes}
+ */
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}

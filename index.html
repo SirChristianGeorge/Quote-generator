@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quote generator</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main class="main">
+            <article class="card" id="js-card">
+                <blockquote class="quote">
+                    <i class="quote__icon fas fa-quote-left"></i>
+                    <p class="quote__text" id="js-quote"></p>
+                    <i
+                        class="quote__icon quote__icon--right fas fa-quote-right"
+                    ></i>
+                    <footer class="quote__author">
+                        <span id="js-author"></span>
+                    </footer>
+                </blockquote>
+                <div class="card__button">
+                    <button class="button" id="js-twitter" title="Tweet this!">
+                        <span class="button__text">
+                            <i class="fab fa-x-twitter"></i>
+                        </span>
+                    </button>
+                    <button class="button" id="js-quote-button">
+                        <span class="button__text">New Quote</span>
+                    </button>
+                </div>
+            </article>
+            <div class="loader hidden" id="js-loader"></div>
+        </main>
+        <script type="module" src="/main.ts"></script>
+    </body>
+</html>

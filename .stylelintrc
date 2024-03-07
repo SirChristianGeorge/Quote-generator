@@ -1,0 +1,19 @@
+{
+    "extends": ["stylelint-prettier/recommended"],
+    "plugins": ["stylelint-scss", "stylelint-prettier"],
+    "rules": {
+        "prettier/prettier": true,
+        "declaration-no-important": true,
+        "keyframe-declaration-no-important": true,
+        "color-no-hex": true,
+        "unit-disallowed-list": ["px"],
+        "selector-disallowed-list": ["/^#/"],
+        "color-named": "never",
+        "selector-class-pattern": [
+            "^[a-z]+(-[a-z]+)*(__[a-z]+(--[a-z]+)?)?$",
+            {
+                "message": "Class names should follow the BEM (Block, Element, Modifier) naming convention."
+            }
+        ]
+    }
+}

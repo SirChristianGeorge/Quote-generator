@@ -1,0 +1,14 @@
+@use '../settings/config' as conf;
+@use '../functions/get-breakpoint' as func;
+
+/**
+* Mixin to prefix several properties at once
+* @param {Map} $breakpoint - Declarations to breakpoints
+* Example: @include breakpoints(xs)
+*/
+
+@mixin breakpoints($breakpoint: xs) {
+    @media screen and (min-width: func.get-breakpoint(conf.$breakpoints, $breakpoint)) {
+        @content;
+    }
+}

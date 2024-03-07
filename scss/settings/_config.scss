@@ -1,0 +1,38 @@
+/**
+ * A map of breakpoints.
+ * xs: 0 Mobile-portrait
+ * sm: 576px (36em) Mobile-landscape and larger
+ * md: 768px (48em) Tablet-portrait and larger
+ * lg: 992px (62em) Tablet-landscape and larger
+ * xl: 1200px (75em) Laptops and larger
+ * xxl: 1400px (87.5em) Laptops and larger
+ */
+
+$breakpoints: (
+    xs: 0,
+    sm: 36em,
+    md: 48em,
+    lg: 62em,
+    xl: 75em,
+    xxl: 87.5em,
+) !default;
+
+$colors: (
+    background-primary: #daf0f4,
+    background-secondary: #f4f8fa,
+    foreground-primary: #f3f8fc,
+    font-primary: #8d837c,
+    border: #fff,
+    shadow: #656565,
+    loader-primary: #000,
+    loader-secondary: #0000,
+) !default;
+
+$z-indexes: (
+    cover: 20,
+    under: -1,
+) !default;
+
+$font-family-primary: 'Jost', sans-serif !default;
+
+$transiton-primary: all 550ms cubic-bezier(0.19, 1, 0.22, 1) !default;

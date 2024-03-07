@@ -1,0 +1,14 @@
+/**
+ * Get value and key from map. It's general function.
+ * @function
+ * @param {string} $key - map key.
+ * @param {string} $map - map variable.
+ */
+
+@function get-value($map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+    @warn "#{$key} is not exist in #{$map} map.";
+    @return null;
+}

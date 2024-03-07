@@ -1,0 +1,71 @@
+@use '../settings/config' as conf;
+@use '../functions' as func;
+
+.button {
+    position: relative;
+
+    padding-inline: 1.2rem;
+
+    font: {
+        family: conf.$font-family-primary;
+        optical-sizing: auto;
+        size: clamp(1.2rem, 2vw, 1.4rem);
+        weight: 400;
+    }
+
+    line-height: 3rem;
+
+    cursor: pointer;
+
+    color: func.get-color(font-primary);
+    background-color: transparent;
+
+    border: {
+        width: 0.1rem;
+        color: func.get-color(font-primary, 0.6);
+        style: solid;
+        radius: 2rem;
+    }
+
+    overflow: hidden;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: conf.$transiton-primary;
+
+    &__text {
+        z-index: func.get-z-index(cover);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -5rem;
+        left: -7.5rem;
+
+        width: 5rem;
+        height: 15.5rem;
+
+        opacity: 0.8;
+
+        background-color: func.get-color(background-secondary);
+
+        transform: rotate(35deg);
+        transition: conf.$transiton-primary;
+
+        z-index: func.get-z-index(under);
+    }
+
+    &:hover {
+        text-decoration: none;
+        scale: 1.05;
+        color: func.get-color(border);
+        border-color: func.get-color(border, 0.3);
+        box-shadow: 0 0.3rem 1rem 0.1rem func.get-color(shadow, 0.2);
+        &::after {
+            left: 120%;
+            transition: conf.$transiton-primary;
+        }
+    }
+}

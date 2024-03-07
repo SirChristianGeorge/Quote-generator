@@ -1,0 +1,12 @@
+@use '../settings/config' as conf;
+@use './get-value' as func;
+
+/**
+ * Get value and key from $z-indexes map.
+ * @function get-z-index
+ * @param {string} $z-index - conf.$z-index map key.
+ */
+
+@function get-z-index($z-index) {
+    @return func.get-value(conf.$z-indexes, $z-index);
+}

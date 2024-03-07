@@ -1,0 +1,16 @@
+@use '../settings/config' as conf;
+@use './get-value' as func;
+
+/**
+ * Get value and key from map. It's general function.
+ * @function get-color
+ * @param {string} $color - conf.$colors map key.
+ * @param {string} $opacity - color opacity.
+ */
+
+@function get-color($color, $opacity: null) {
+    @if $opacity != null {
+        @return rgba(func.get-value(conf.$colors, $color), $opacity);
+    }
+    @return func.get-value(conf.$colors, $color);
+}

@@ -1,0 +1,44 @@
+@use '../settings/config' as conf;
+@use '../functions/get-color' as func;
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    &__text,
+    &__author {
+        margin-block: auto;
+        color: func.get-color(font-primary);
+        font: {
+            family: conf.$font-family-primary;
+            optical-sizing: auto;
+        }
+    }
+
+    &__icon {
+        color: func.get-color(font-primary);
+
+        &--right {
+            align-self: flex-end;
+        }
+    }
+
+    &__text {
+        font: {
+            size: clamp(1.4rem, 5vw, 2.4rem);
+            weight: 320;
+        }
+    }
+
+    &__author {
+        margin-block: 1rem;
+        font: {
+            size: clamp(1rem, 2vw, 1.5rem);
+            weight: 300;
+            style: italic;
+        }
+
+        align-self: center;
+    }
+}
