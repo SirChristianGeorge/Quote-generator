@@ -5,8 +5,8 @@
 
 import { describe, test, expect, beforeEach } from 'bun:test';
 
-import Loader from '../../js/components/Loader';
-import { loadingElements } from '../../js/config/domElements';
+import Loader from '../../src/js/components/Loader';
+import { loadingElements } from '../../src/js/config/domElements';
 
 /**
  * Tests for the Loader class.

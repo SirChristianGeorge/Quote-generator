@@ -1,4 +1,4 @@
 node_modules/
-build/
-js/
-scss/settings/
+dist/
+src/js/
+src/scss/settings/

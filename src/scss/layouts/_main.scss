@@ -13,20 +13,20 @@
         color: func.get-color(
             background-primary
         ); /* fallback for old browsers */
-        image: url('../../img/background/bgw576.webp');
+        image: url('images/background/bgw576.webp');
         size: cover;
         position: 50%;
     }
 
     @include mixin.high-resolution {
-        background-image: url('../../img/background/bgw576@2x.webp');
+        background-image: url('images/background/bgw576@2x.webp');
     }
 
     @include mixin.breakpoints(sm) {
-        background-image: url('../../img/background/bgw992.webp');
+        background-image: url('/images/background/bgw992.webp');
     }
 
     @include mixin.breakpoints(lg) {
-        background-image: url('../../img/background/bgw1920.webp');
+        background-image: url('/images/background/bgw1920.webp');
     }
 }
